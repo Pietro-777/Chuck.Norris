@@ -9,42 +9,53 @@
 </head>
 
 <body>
-    <form action="">
-        <select id="categories">
-            <option value="animal">Animal</option>
-            <option value="career">Career</option>
-            <option value="celebrity">Celebrity</option>
-            <option value="dev">Dev</option>
-            <option value="explicit">Explicit</option>
-            <option value="fashion">Fashion</option>
-            <option value="food">Food</option>
-            <option value="history">History</option>
-            <option value="money">Money</option>
-            <option value="movie">Movie</option>
-            <option value="music">Music</option>
-            <option value="political">Political</option>
-            <option value="religion">Religion</option>
-            <option value="science">Science</option>
-            <option value="sport">Sport</option>
-            <option value="travel">Travel</option>
-        </select>
-    </form>
-    <div>
-        <input type="button" value="Invia" id="button">
+    <div class="container">
+        <form action="">
+            <select id="categories">
+                <option value="animal">Animal</option>
+                <option value="career">Career</option>
+                <option value="celebrity">Celebrity</option>
+                <option value="dev">Dev</option>
+                <option value="explicit">Explicit</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Food</option>
+                <option value="history">History</option>
+                <option value="money">Money</option>
+                <option value="movie">Movie</option>
+                <option value="music">Music</option>
+                <option value="political">Political</option>
+                <option value="religion">Religion</option>
+                <option value="science">Science</option>
+                <option value="sport">Sport</option>
+                <option value="travel">Travel</option>
+            </select>
+        </form>
+        <div>
+            <input type="button" value="BATTUTA" id="button">
+        </div>
     </div>
+    <p id="Scritta"></p>
 </body>
 <script>
     let button = document.querySelector('#button');
     let categories = document.querySelector('#categories');
-    let contatore=0;
+    let container = document.querySelector('.container');
+    let contatore = 0;
     button.addEventListener('click', () => {
-        let category = categories.value;
-        fetch('https://api.chucknorris.io/jokes/random?category=' + category)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                document.querySelector('body').innerHTML = data.value
-            })
+        if (contatore == 3) {
+            container.classList.add("hide")
+            document.querySelector("#Scritta").innerHTML = "Chuck Norris non fa una pausa pranzo. Il pranzo si ferma solo per dargli il tempo di mangiare...RIPROVA PIU' TARDI"
+        } else {
+            let category = categories.value;
+            fetch('https://api.chucknorris.io/jokes/random?category=' + category)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.querySelector('#Scritta').innerHTML = data.value
+                })
+        }
+
+        contatore++;
     })
 
 </script>
