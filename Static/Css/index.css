@@ -11,7 +11,7 @@ html,body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c70000; 
+    background-color: #c76a00; 
 }
 
 
@@ -69,13 +69,9 @@ select {
 
 .img {
     display: flex;
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: flex-start; /* Allinea in alto */
-    height: 150px; /* Altezza dell'area che contiene l'immagine */
-     /* Distanza dal bordo superiore */
+    justify-content: center; 
+    align-items: flex-start; 
+    width: 300px; 
+    height: auto;
 }
 
-.img img {
-    width: 300px; /* Riduce la larghezza */
-    height: auto; /* Mantiene le proporzioni */
-}
