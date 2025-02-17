@@ -33,8 +33,8 @@
     </div>
 </body>
 <script>
-    let button = document.getElementById('button');
-    let categories = document.getElementById('categories');
+    let button = document.querySelector('#button');
+    let categories = document.querySelector('#categories');
     button.addEventListener('click', () => {
         let category = categories.value;
         fetch('https://api.chucknorris.io/jokes/random?category=' + category)
@@ -43,6 +43,7 @@
                 console.log(data);
             })
     })
+    
 </script>
 
 </html>
