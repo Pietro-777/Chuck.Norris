@@ -1,4 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c70000; 
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+select {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+#button {
+    background-color: #4c74af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px ;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+
+#button:hover {
+    background-color: #3a5b8d;
+}
+
+
+#Scritta {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+
 .hide {
     display: none;
 }
 
+.img {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: flex-start; /* Allinea in alto */
+    height: 150px; /* Altezza dell'area che contiene l'immagine */
+     /* Distanza dal bordo superiore */
+}
+
+.img img {
+    width: 300px; /* Riduce la larghezza */
+    height: auto; /* Mantiene le proporzioni */
+}
