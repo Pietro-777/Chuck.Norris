@@ -49,9 +49,9 @@
     let container = document.querySelector('.container');
     let contatore = 0;
     button.addEventListener('click', () => {
-        if (contatore == 3) {
+        if (contatore == 5) {
             container.classList.add("hide")
-            document.querySelector("#Scritta").innerHTML = "Chuck Norris non fa una pausa pranzo. Il pranzo si ferma solo per dargli il tempo di mangiare...RIPROVA PIU' TARDI"
+            document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat... TRY AGAIN LATER."
         } else {
             let category = categories.value;
             fetch('https://api.chucknorris.io/jokes/random?category=' + category)
