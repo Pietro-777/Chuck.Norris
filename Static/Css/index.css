@@ -1,31 +1,22 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,body {
-    height: 100%;
+body {
+    height: 100vh; 
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #c76a00; 
+    margin: 0; 
+    flex-direction: column; 
 }
-
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    text-align: center;
-
 }
 
-
-select {
+#categories {
     width: 200px;
     padding: 10px;
     margin-bottom: 20px;
@@ -35,43 +26,35 @@ select {
     background-color: #fff;
 }
 
-
 #button {
-    background-color: #4c74af;
+    background-color: #afaa4c;
     border: none;
     color: white;
     padding: 15px 32px;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px ;
-    cursor: pointer;
+    font-size: 30px;
+    margin: 4px;
     border-radius: 12px;
-    transition: background-color 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
 }
-
-
-#button:hover {
-    background-color: #3a5b8d;
-}
-
 
 #Scritta {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 40px;
     color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
-
 
 .hide {
     display: none;
 }
 
 .img {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
-    width: 300px; 
+    margin-bottom: 20px; 
     height: auto;
 }
+
 
