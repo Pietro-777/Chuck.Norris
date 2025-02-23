@@ -42,20 +42,23 @@
 
 </body>
 <script>
-    let button = document.querySelector('#button');
-    let categories = document.querySelector('#categories');
-    let container = document.querySelector('.container');
-    let contatore = 0;
+    let button = document.querySelector('#button')
+    let categories = document.querySelector('#categories')
+    let container = document.querySelector('.container')
+    let contatore = 0
     button.addEventListener('click', () => {
         if (contatore == 5) {
             container.classList.add("hide")
-            document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat... TRY AGAIN LATER."
+            document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat...Give me 3 seconds and I'll be there."
+            setTimeout(() => {
+            location.reload()
+        }, 3000)
         } else {
             let category = categories.value;
             fetch('https://api.chucknorris.io/jokes/random?category=' + category)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
+                    console.log(data)
                     document.querySelector('#Scritta').innerHTML = data.value
                 })
         }
