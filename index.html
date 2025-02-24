@@ -37,14 +37,14 @@
             <input type="button" value="BATTUTA" id="button">
         </div>
     </div>
-
     <p id="Scritta"></p>
-
+    <p id="counterDisplay"></p>
 </body>
 <script>
     let button = document.querySelector('#button')
     let categories = document.querySelector('#categories')
     let container = document.querySelector('.container')
+    let counterDisplay = document.querySelector("#counterDisplay")
     let contatore = 0
     button.addEventListener('click', () => {
         if (contatore == 5) {
@@ -61,8 +61,10 @@
                     console.log(data)
                     document.querySelector('#Scritta').innerHTML = data.value
                 })
+
         }
         contatore++
+        counterDisplay.innerHTML = "Battute rimanenti prima della pausa Pranzo: " + (6 - contatore)
     })
 
 </script>

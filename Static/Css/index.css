@@ -47,6 +47,15 @@ body {
     color: white;
 }
 
+#counterDisplay{
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
 .hide {
     display: none;
 }
