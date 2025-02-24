@@ -49,10 +49,10 @@
     button.addEventListener('click', () => {
         if (contatore == 5) {
             container.classList.add("hide")
-            document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat...Give me 3 seconds and I'll be there."
+            document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat...Give me 5 seconds and I'll be there."
             setTimeout(() => {
             location.reload()
-        }, 3000)
+        }, 5000)
         } else {
             let category = categories.value
             fetch('https://api.chucknorris.io/jokes/random?category=' + category)
