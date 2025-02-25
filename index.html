@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="Static/Css/index.css">
     <title>Document</title>
 </head>
+<style>
+
+</style>
 
 <body>
     <div class="img">
@@ -42,6 +45,7 @@
     <p id="counterDisplay"></p>
 
 
+
 </body>
 <script>
     let button = document.querySelector('#button')
@@ -69,7 +73,7 @@
         }
         contatore++
         counterDisplay.innerHTML = "Battute rimanenti prima della pausa Pranzo: " + (6 - contatore)
-
+        counterDisplay.style.backgroundColor = "#bc731f"
     })
 </script>
 

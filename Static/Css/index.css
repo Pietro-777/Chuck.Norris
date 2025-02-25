@@ -49,11 +49,13 @@ body {
 
 #counterDisplay {
     font-size: 25px;
-    color: #333;
+    color: #ffffff;
     text-align: center;
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: transparent;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
 }
 
 .hide {
@@ -62,5 +64,4 @@ body {
 
 .img {
     margin-bottom: 20px;
-    height: auto;
 }
