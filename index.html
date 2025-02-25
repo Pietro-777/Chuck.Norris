@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Static/Css/index.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="img">
         <img src="Static/Images/chucknorris.png" alt="">
@@ -39,8 +40,8 @@
     </div>
     <p id="Scritta"></p>
     <p id="counterDisplay"></p>
-    
-    
+
+
 </body>
 <script>
     let button = document.querySelector('#button')
@@ -53,8 +54,8 @@
             container.classList.add("hide")
             document.querySelector("#Scritta").innerHTML = "Chuck Norris doesn't take a lunch break. Lunch only stops to give him time to eat...Give me 5 seconds and I'll be there."
             setTimeout(() => {
-            location.reload()
-        }, 5000)
+                location.reload()
+            }, 5000)
         } else {
             let category = categories.value
             fetch('https://api.chucknorris.io/jokes/random?category=' + category)
@@ -62,13 +63,14 @@
                 .then(data => {
                     console.log(data)
                     document.querySelector('#Scritta').innerHTML = data.value
+
                 })
 
         }
         contatore++
         counterDisplay.innerHTML = "Battute rimanenti prima della pausa Pranzo: " + (6 - contatore)
-    })
 
+    })
 </script>
 
 </html>
